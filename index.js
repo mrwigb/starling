@@ -20,7 +20,7 @@ let message = msg.content.toLowerCase(),
       richEmbed = new Discord.RichEmbed(),
       PREFIX
 
-  // console.log(author + ': ' + authorId + ' (' + msg.content + ')');
+  console.log(author + ': ' + authorId + ' (' + msg.content + ')');
 
 
   if (message.startsWith('*')) PREFIX = '*'
@@ -35,10 +35,10 @@ let message = msg.content.toLowerCase(),
 
 
 
-    if (cmd === 'notice me') noticeMe.noticeMe(msg, richEmbed)
+    if (cmd === 'notice me') noticeMe.noticeMe(msg, richEmbed, name)
     if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
     if (cmd === 'help') help.help(msg, name, richEmbed, bot)
-    if (cmd === 'poof') poof.poof(msg, splitMessage, author, authorId, PREFIX)
+    if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
   }
 
 
