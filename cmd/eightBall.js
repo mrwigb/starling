@@ -1,14 +1,12 @@
-exports.eightBall = (richEmbed, msg) => {
-  const cmd =
+exports.eightBall = (richEmbed, msg, splitMessage, name) => {
 
-//8ball
-       replies = ["(っ◔◡◔)っ ♥ dont count on it ♥", 
-                     "【﻿ｓｕｒｅ，　ｗｈａｔｅｖｅｒ】", 
-                     "w♥e♥l♥l♥ ♥t♥h♥a♥t♥s♥ ♥a♥ ♥d♥u♥m♥b♥ ♥q♥u♥e♥s♥t♥i♥o♥n", 
-                     "ｏｈ ｓｏ ｙｏｕ＇ｒｅ ｏｎｅ ｏｆ ｔｈｏｓｅ ｋｉｎｄ ｏｆ ｐｅｏｐｌｅ", 
-                     "ₐₙd ᵢf ᵢ ₛₐy ₙₒ?", 
-                     "≋w≋o≋w≋", 
-                     "(-_-) 𝐋Ã𝕞є (-_-)", 
+       replies = ["(っ◔◡◔)っ ♥ dont count on it ♥",
+                     "【﻿ｓｕｒｅ，　ｗｈａｔｅｖｅｒ】",
+                     "w♥e♥l♥l♥ ♥t♥h♥a♥t♥s♥ ♥a♥ ♥d♥u♥m♥b♥ ♥q♥u♥e♥s♥t♥i♥o♥n",
+                     "ｏｈ ｓｏ ｙｏｕ＇ｒｅ ｏｎｅ ｏｆ ｔｈｏｓｅ ｋｉｎｄ ｏｆ ｐｅｏｐｌｅ",
+                     "ₐₙd ᵢf ᵢ ₛₐy ₙₒ?",
+                     "≋w≋o≋w≋",
+                     "(-_-) 𝐋Ã𝕞є (-_-)",
                      "𝖍𝖊𝖑𝖑 𝖞𝖊𝖆𝖍 𝖉𝖚𝖉𝖊!",
                      "ժօ ì հąѵҽ էօ ąղʂաҽɾ?",
                      'ᶜᵒⁿᶠᵘᶜⁱᵘˢ ˢᵃʸˢ "ᴰᴼᴱˢ ᵀᴴᴱ ᴮᴱᴬᴿ ˢᴴᴵᵀ ᴵᴺ ᵀᴴᴱ ᵂᴼᴼᴰˢ?"',

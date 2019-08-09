@@ -3,24 +3,24 @@ require('dotenv').config()
 const version = "1.0.0",
       Discord = require('discord.js'),
       token = process.env.token,
-      bot = new Discord.Client();
+      bot = new Discord.Client()
 
 bot.login(token);
 bot.on('ready', () => console.log ('online...'))
 bot.on('message', msg => {
-  
+
 let message = msg.content.toLowerCase(),
       eightBall = require('./cmd/eightBall'),
       noticeMe = require('./cmd/noticeMe'),
       help = require('./cmd/help'),
       poof = require('./cmd/admin/poof'),
-      author = msg.member.user.tag,
-      authorId = msg.member.id,
+      author = msg.author.username,
+      authorId = msg.author.id,
       name = (msg.author.tag).substring(0, msg.author.tag.length - 5),
       richEmbed = new Discord.RichEmbed(),
-      PREFIX    
+      PREFIX
 
-  console.log(author + ': ' + authorId + ' (' + msg.content + ')');
+  // console.log(author + ': ' + authorId + ' (' + msg.content + ')');
 
 
   if (message.startsWith('*')) PREFIX = '*'
@@ -31,14 +31,14 @@ let message = msg.content.toLowerCase(),
 
   if (PREFIX) {
     const cmd = message.replace(PREFIX, ''),
-        splitMessage = cmd.trim().split(' ')
+          splitMessage = cmd.trim().split(' ')
 
 
 
-    if (cmd === 'notice me') noticeMe(msg, richEmbed)
-    if (cmd === '8ball') eightBall(msg, richEmbed)
-    if (cmd === 'help') help(msg, name, richEmbed, bot)
-    if (cmd === 'poof') poof(msg, splitMessage, author, authorId, PREFIX)
+    if (cmd === 'notice me') noticeMe.noticeMe(msg, richEmbed)
+    if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
+    if (cmd === 'help') help.help(msg, name, richEmbed, bot)
+    if (cmd === 'poof') poof.poof(msg, splitMessage, author, authorId, PREFIX)
   }
 
 
