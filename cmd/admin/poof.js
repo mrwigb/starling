@@ -15,6 +15,6 @@ exports.poof = (msg, splitMessage, author, authorId, PREFIX) => {
         }
       }
     } else {
-      msg.channel.send('Lol not today bitch')
+      msg.channel.send(`you're not fam`)
     }
   }
