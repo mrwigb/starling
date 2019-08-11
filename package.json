@@ -9,9 +9,13 @@
   "author": "maverick taylor",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "discord.js": "^11.5.1",
     "dotenv": "^8.0.0",
+    "got": "^9.6.0",
+    "mal-scraper": "^2.6.3",
     "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
     "snoostorm": "^1.0.2",
     "snoowrap": "^1.18.0"
   },
