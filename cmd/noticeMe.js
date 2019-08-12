@@ -10,7 +10,7 @@ exports.noticeMe = (msg, richEmbed, name) => {
   const noticeEmbed = richEmbed
       .setColor("#ffd4d6")
       .setAuthor(name)
-      .addField("ok...", replies[result], true);
+      .addField(replies[result], true);
 
   msg.channel.send(noticeEmbed);
 }
