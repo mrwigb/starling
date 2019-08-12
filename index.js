@@ -39,7 +39,7 @@ let message = msg.content.toLowerCase(),
     if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
     if (cmd === 'help') help.help(msg, name, richEmbed, bot)
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
-    if (cmd === 'interesting') red.fetchRed(msg, richEmbed)
+    if (cmd === 'red') red.fetchRed(msg, richEmbed)
     if (cmd === 'version') msg.channel.send(version)
   }
 

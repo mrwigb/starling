@@ -1,8 +1,19 @@
 const fetch = require('node-fetch')
 
 exports.fetchRed = async (msg, richEmbed) => {
-assort = [`https://www.reddit.com/r/educationalgifs.json?sort=controversial&t=week&type=link`, `https://www.reddit.com/r/trippingthroughtime.json?sort=controversial&t=week&type=link`]
-let url = Math.floor((Math.random() * assort));
+
+
+assort = [
+  `https://www.reddit.com/r/educationalgifs.json?sort=controversial&t=week&type=link`,
+  `https://www.reddit.com/r/trippingthroughtime.json?sort=controversial&t=week&type=link`
+];
+
+let url = Math.floor((Math.random() * assort.length));
+
+
+
+
+
 try {
   const data = await fetch(url),
         json = await data.json()
