@@ -11,11 +11,12 @@ try {
   if (json) {
     let rand = Math.ceil(Math.random() * (json.data.children.length - 1) + 1),
         post = json.data.children[rand].data
-        imgPush = post.url
+        imgPush
   
-          if (imgPush.startsWith(['https://gfy', 'gfy', 'http://gfy'])) {
-    imgPush = (imgPush + '.gif')
-  }
+          if (post.url.startsWith(['https://gfy', 'gfy', 'http://gfy'])) imgPush = post.url + '.gif'
+          if (post.url.startsWith(!['https://gfy', 'gfy', 'http://gfy'])) imgPush = post.url
+  
+          
 
     richEmbed
     .setColor("#ffd4d6")
