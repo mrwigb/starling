@@ -1,6 +1,6 @@
 require('dotenv').config()
 //STARLING
-const version = "1.0.0",
+const version = ".5",
       Discord = require('discord.js'),
       token = process.env.token,
       bot = new Discord.Client()
@@ -14,7 +14,7 @@ let message = msg.content.toLowerCase(),
       noticeMe = require('./cmd/noticeMe'),
       help = require('./cmd/help'),
       poof = require('./cmd/admin/poof'),
-      interesting = require('./cmd/thats-interesting'),
+      red = require('./cmd/red'),
       author = msg.author.username,
       authorId = msg.author.id,
       name = (msg.author.tag).substring(0, msg.author.tag.length - 5),
@@ -39,7 +39,8 @@ let message = msg.content.toLowerCase(),
     if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
     if (cmd === 'help') help.help(msg, name, richEmbed, bot)
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
-    if (cmd === 'interesting') interesting.fetchInteresting(msg, richEmbed)
+    if (cmd === 'interesting') red.fetchRed(msg, richEmbed)
+    if (cmd === 'version') msg.channel.send(version)
   }
 
 
