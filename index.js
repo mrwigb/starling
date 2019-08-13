@@ -31,6 +31,9 @@ let message = msg.content.toLowerCase(),
   if (message.startsWith('hey star ')) PREFIX = 'hey star '
   if (message.startsWith('star ')) PREFIX = 'star '
 
+  if (message === 'star' || message === '*' || message === 'starling' || message === '*ling') msg.channel.send(':black_heart:')
+
+
   if (PREFIX) {
     const cmd = message.replace(PREFIX, ''),
           splitMessage = cmd.trim().split(' ')
@@ -41,7 +44,7 @@ let message = msg.content.toLowerCase(),
     if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
     if (cmd === 'help') help.help(msg, name, richEmbed, bot)
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
-    if (cmd === 'r') red.fetchRed(msg, richEmbed)
+    if (cmd === 'nice') red.fetchRed(msg, richEmbed)
     if (cmd === 'version') msg.channel.send(version)
   }
 

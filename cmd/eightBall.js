@@ -16,7 +16,15 @@ exports.eightBall = (richEmbed, msg, splitMessage, name) => {
                      "░▒▓█►─═  Ｂ𝑒𝕋! ═─◄█▓▒░",
                      "／／Ｉ　ｔｈｉｎｋ　ｙｏｕ　ｋｎｏｗ　ｔｈｅ　ａｎｓｗｅｒ．．．　いつまでも",
                      "はい",
-                     "ｍａｎ░ｙｏｕ＇ｒｅ░ｄｅｅp"
+                     "ｍａｎ░ｙｏｕ＇ｒｅ░ｄｅｅp",
+                     "yes",
+                     "I don't think so...",
+                     "probably",
+                     "focus your nen and ask again",
+                     "fufufufu",
+                     "ABSOLUTELY :heart: !!!"
+                  
+                     
                     ];
       let result = Math.floor((Math.random() * replies.length));
       let question = splitMessage.slice(1).join(" ");
