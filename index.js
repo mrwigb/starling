@@ -50,5 +50,7 @@ let message = msg.content.toLowerCase(),
     if (cmd === 'gunpla') gunpla.fetchGunpla(msg, richEmbed)
   }
 
+  //test
+
 
 })
