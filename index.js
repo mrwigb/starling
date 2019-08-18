@@ -17,7 +17,7 @@ let message = msg.content.toLowerCase(),
       help = require('./cmd/help'),
       poof = require('./cmd/admin/poof'),
       red = require('./cmd/red'),
-      gunpla = require('.cmd/gunpla'),
+      gunpla = require('./cmd/gunpla'),
       author = msg.author.username,
       authorId = msg.author.id,
       name = (msg.author.tag).substring(0, msg.author.tag.length - 5),
@@ -47,8 +47,7 @@ let message = msg.content.toLowerCase(),
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
     if (cmd === 'nice') red.fetchRed(msg, richEmbed)
     if (cmd === 'version') msg.channel.send(version)
-    if (cmd === 'gunpla') setInterval(gunpla, 3600000)
-    if (cmd === 'gunpla stop') gunpla === NaN;
+    if (cmd === 'gunpla') gunpla.fetchGunpla(msg, richEmbed)
   }
 
 
