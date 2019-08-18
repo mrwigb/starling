@@ -58,13 +58,10 @@ exports.fetchGunpla = async (msg, splitMessage, author, authorId, PREFIX) => {
 
             msg.channel.send(imgPush)
             
-            }
-
-
-            msg.channel.bulkDelete(splitMessage[1])
           } else {
             console.log(`you're not fam`)
             msg.channel.send(`you're not fam`)
           }
         }
+      }
     }
