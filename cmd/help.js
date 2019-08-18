@@ -8,7 +8,7 @@ exports.help = (msg, name, richEmbed, bot) => {
       .setThumbnail("https://imgur.com/7punCbz.png")
       .addField("Hello!!!", "****************", true)
       .addField("My name is", "░s░t░a░r░l░i░n░g░", true)
-      .addField("cmds:", '`*help` = cmd/info window\n`*8ball + question` = i pretend to🎱\n`*noticeme` = ill try to acknowledge your presence.\n`*poof` = destruct\n')
+      .addField("cmds:", '`*help` = cmd/info window\n`*8ball + question` = i pretend to🎱\n`*noticeme` = ill try to acknowledge your presence.\n`*nice` = random gif or whatever\n')
       .addField("Server Emojis:", "***___----___----___----___***", true)
       .addField("`:nrd:`", bot.emojis.get('604155886990131220'), true)
       .addField("`:eat:`", bot.emojis.get('602535630236549150'), true)
