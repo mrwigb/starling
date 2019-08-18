@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 
 exports.fetchGunpla = async (msg, splitMessage, author, authorId, PREFIX) => {
-
+  if (PREFIX && authorId !== '602978943850512403' || PREFIX && author === 'ZARK') {
    
 
             let repeat = true;
@@ -48,7 +48,7 @@ exports.fetchGunpla = async (msg, splitMessage, author, authorId, PREFIX) => {
             
             }
             
-      if (PREFIX && authorId !== '602978943850512403' || PREFIX && author === 'ZARK') {
+      
   
 
                 if (msg.member.hasPermission('MANAGE_MESSAGES')) {
