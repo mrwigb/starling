@@ -6,7 +6,7 @@ exports.fetchGunpla = async (msg, richEmbed) => {
 
 let repeat = true;
 
-const index = [`https://www.reddit.com/r/Gunpla.json?sort=controversial&t=week&type=link`]
+const index = [`https://www.reddit.com/r/Gunpla.json?sort=hot&t=alltime&type=link`]
 
 
 
@@ -28,7 +28,10 @@ while (repeat) {
           if (post.url.startsWith('https://i.imgur')) post.url += '.gifv'
           
       
-       imgPush = [post.title, post.url]
+       imgPush = richEmbed
+       .setTitle(post.title)
+       .setImage(post.url)
+       .setColor("#ffd4d6");
    
     repeat=false; 
 
