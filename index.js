@@ -50,7 +50,7 @@ let message = msg.content.toLowerCase(),
     if (cmd === 'version') msg.channel.send(version)
     if (cmd === 'gunpla') {
       what()
-      setInterval(what, 10000)
+      setInterval(what, 10800000)
     }
     if (cmd === 'gunpla off') {
       console.log('cleared')
