@@ -47,7 +47,8 @@ let message = msg.content.toLowerCase(),
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
     if (cmd === 'nice') red.fetchRed(msg, richEmbed)
     if (cmd === 'version') msg.channel.send(version)
-    if (cmd === 'gunpla') gunpla.fetchGunpla(msg, richEmbed)
+    if (cmd === 'gunpla') setInterval(() =>{gunpla.fetchGunpla(msg, splitMessage, author, authorId, PREFIX)}, 10000)
+    
   }
 
 
