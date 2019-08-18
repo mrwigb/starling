@@ -51,5 +51,7 @@ let message = msg.content.toLowerCase(),
     
   }
 
+  //test
+
 
 })
