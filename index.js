@@ -40,17 +40,19 @@ let message = msg.content.toLowerCase(),
     const cmd = message.replace(PREFIX, ''),
           splitMessage = cmd.trim().split(' ')
 
-    const what = () => gunpla.fetchGunpla(msg, splitMessage, author, authorId, PREFIX, richEmbed)
+    const gunplaPic = () => gunpla.fetchGunpla(msg, splitMessage, author, authorId, PREFIX, richEmbed)
+          
 
     if (cmd === 'notice me') noticeMe.noticeMe(msg, richEmbed, name)
     if (cmd.startsWith('8ball')) eightBall.eightBall(richEmbed, msg, splitMessage, name)
     if (cmd === 'help') help.help(msg, name, richEmbed, bot)
     if (cmd.startsWith('poof')) poof.poof(msg, splitMessage, author, authorId, PREFIX)
     if (cmd === 'nice') red.fetchRed(msg, richEmbed)
+    if (cmd === 'iine') red.fetchRed(msg, richEmbed)
     if (cmd === 'version') msg.channel.send(version)
     if (cmd === 'gunpla') {
-      what()
-      setInterval(what, 10800000)
+      gunplaPic()
+      setInterval(gunplaPic, 10800000)
     }
     if (cmd === 'gunpla off') {
       console.log('cleared')

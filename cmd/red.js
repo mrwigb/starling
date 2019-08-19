@@ -4,21 +4,20 @@ exports.fetchRed = async (msg, richEmbed) => {
   
   let repeat = true;
 
-const index = [`https://www.reddit.com/r/educationalgifs.json?sort=controversial&t=week&type=link`,
-               `https://www.reddit.com/r/oddlysatisfying.json?sort=controversial&t=week&type=link`,
-               `https://www.reddit.com/r/mesmerizinggifs/.json?sort=controversial&t=week&type=link`]
+  const index = [`https://www.reddit.com/r/educationalgifs.json?sort=hot&t=all`,
+                `https://www.reddit.com/r/oddlysatisfying.json?sort=hot&t=all`,
+                `https://www.reddit.com/r/mesmerizinggifs.json?sort=hotl&t=all`,
+                `https://www.reddit.com/r/pic/.json?sort=hot&t=all`,
+                `https://www.reddit.com/r/pic/.json?sort=controversial&t=all`]
 
+  let url = Math.floor((Math.random() * index.length));
 
-
-            let url = Math.floor((Math.random() * index.length));
-while (repeat) {
-try {
-  let data = await fetch(index[url]),
-        json = await data.json()
-  if (json) {
-    let rand = Math.ceil(Math.random() * (json.data.children.length - 1) + 1),
-        post = json.data.children[rand].data
-        post.url
+    while (repeat) {
+    try {let data = await fetch(index[url]),
+             json = await data.json()
+    if (json) {let rand = Math.ceil(Math.random() * (json.data.children.length - 1) + 1),
+                   post = json.data.children[rand].data
+                   post.url
   
           if (post.url.startsWith('https://gfy')) post.url += '.gif'
           if (post.url.startsWith('http://gfy')) post.url += '.gif'
